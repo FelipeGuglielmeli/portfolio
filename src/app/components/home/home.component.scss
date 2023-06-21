@@ -1,0 +1,55 @@
+.home {
+
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(to right,rgba(245, 245, 245, 0.527),rgba(245, 245, 245, 0.459)),url(../../../assets/common-bg.svg);
+
+}
+
+.home_content {
+  position: absolute;
+  display: flex;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 90rem;
+  width: 75%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Source Sans Black',sans-serif;
+  font-weight: 700;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 2.7rem;
+  padding-bottom: 1.3rem;
+}
+
+.primary_text {
+  font-family: 'Source Sans Light',sans-serif;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.btn_cta {
+  background-color: darkblue;
+  color: white;
+  width: 120%;
+  box-shadow: 0 5px 15px 0 rgba(0,0,0,.15);
+  transition: background-color .3s;
+}
+
+.btn_cta:hover {
+  background-color: rgb(77, 77, 199);
+}
+
+
+
