@@ -1,3 +1,44 @@
-<div class="sobre">
-  sobres
-</div>
+<section class="sobre">
+  <div class="heading">
+    <span class="title">
+      <h1>Sobre mim</h1>
+    </span>
+    <span>
+      <p class="subtitle">
+        Here you will find more information about me, what I do, and my current skills mostly in terms of programming
+        and technology.
+      </p>
+    </span>
+  </div>
+  <div class="conteudo row">
+    <div class="content col-6">
+      <h3 class="title">Get to know me!</h3>
+      <span class="main_text">
+        <p>I'm a Frontend Web Developer building the Front-end of Websites and Web Applications that
+          leads to the
+          success of the overall product. Check out some of my work in the Projects section.</p>
+
+        <p>I also like sharing content related to the stuff that I have learned over the years in Web Development so it
+          can help other people of the Dev Community. Feel free to Connect or Follow me on my Linkedin where I post
+          useful content related to Web Development and Programming</p>
+
+        <p>I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that
+          matches my skills and experience then don't hesitate to contact me.</p>
+      </span>
+    </div>
+    <div class="skills col-6">
+      <div>
+        <h2 class="title">My Skills</h2>
+      </div>
+      <div class="set_skills">
+        <div class="skill" *ngFor="let item of langs">
+          <div class="item_name">{{ item.name }}</div>
+          <div class="item_anos " *ngIf="item.anos == 1; else plural" >{{ item.anos}} ano</div>
+          <ng-template #plural>{{ item.anos}} anos</ng-template>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>

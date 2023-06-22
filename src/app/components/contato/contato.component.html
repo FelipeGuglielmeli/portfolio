@@ -1,1 +1,22 @@
-<div class="contato" [id]="elementId">Contato</div>
+<section class="contato" [id]="elementId">
+  <h1>CONTATO</h1>
+  <div class="form_content">
+    <form [formGroup]="contactForm" class="formulario">
+
+      <label class="form_label">Nome</label>
+      <input formControlName="nome" class="form_input" placeholder="Nome">
+      <div *ngIf="contactForm.controls['nome'].status === 'INVALID' && contactForm.touched">err</div>
+
+      <label class="form_label">E-mail</label>
+      <input formControlName="email" class="form_input" type="e-mail" placeholder="E-mail" >
+
+      <label class="form_label">Telefone</label>
+      <input formControlName="telefone" class="form_input" placeholder="Telefone" >
+
+      <label class="form_label">Mensagem</label>
+      <textarea formControlName="mensagem" class="form_input" placeholder="Mensagem"></textarea>
+
+      <button [disabled]="!contactForm.valid" class="btn" mat-raised-button color="primary" (click)="submitForm(contactForm)">Enviar</button>
+    </form>
+  </div>
+</section>

@@ -1,4 +1,77 @@
 .contato {
+  background-position: center;
   height: 100vh;
-  background-color: yellow;
+  position: relative;
+  background-image: linear-gradient(to right,rgba(245, 245, 245, 0.527),rgba(245, 245, 245, 0.459)),url(../../../assets/common-bg.svg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: 'Source Sans Black', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    text-transform: none;
+    text-align: justify;
+    padding-bottom: 10px;
+  }
 }
+
+textarea {
+  resize: none;
+}
+
+.form_content {
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 35px 0 ;
+  box-shadow: rgba(100,100,111,.2) 0 7px 29px 0;
+  width: 70%;
+
+
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+
+  .form_input {color: #333;
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid #ebebeb;
+    font-size: 0.8rem;
+    letter-spacing: 0;
+    background: #f0f0f0;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+
+  .form_label {
+    font-family: 'Source Sans Light', sans-serif;
+    color: #666;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: 0.5rem;
+    display: block;
+    text-align: left;
+  }
+
+  button {
+    background-color: darkblue;
+    color: white;
+    width: 40%;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,.15);
+    transition: background-color .3s;
+    margin-top: 20px;
+  }
+
+  button:hover {
+    background-color: rgb(77, 77, 199);
+  }
+}
+
+
