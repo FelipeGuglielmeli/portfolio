@@ -38,12 +38,6 @@ describe('ContatoComponent', () => {
   });
 
   it('should submitForm', () => {
-    let data = {
-      nome: '',
-      email: '',
-      telefone:'',
-      mensagem: ''
-    }
-    expect(component.submitForm(data)).toBe();
+    expect(component.submitForm()).toBe();
   });
 });
