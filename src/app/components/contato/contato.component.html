@@ -3,20 +3,27 @@
   <div class="form_content">
     <form [formGroup]="contactForm" class="formulario">
 
-      <label class="form_label">Nome</label>
+      <label class="form_label">Nome
+        <span [ngStyle]="{ 'display': contactForm.controls['nome'].status === 'INVALID' && contactForm.controls['nome'].touched ? 'inline-flex' : 'none' }">Nome é obrigatório!</span>
+      </label>
       <input formControlName="nome" class="form_input" placeholder="Nome">
-      <div *ngIf="contactForm.controls['nome'].status === 'INVALID' && contactForm.touched">err</div>
 
-      <label class="form_label">E-mail</label>
+      <label class="form_label">E-mail
+        <span [ngStyle]="{ 'display': contactForm.controls['email'].status === 'INVALID' && contactForm.controls['email'].touched ? 'inline-flex' : 'none' }">E-mail é obrigatório!</span>
+      </label>
       <input formControlName="email" class="form_input" type="e-mail" placeholder="E-mail" >
 
-      <label class="form_label">Telefone</label>
+      <label class="form_label">Telefone
+        <span [ngStyle]="{ 'display': contactForm.controls['telefone'].status === 'INVALID' && contactForm.controls['telefone'].touched ? 'inline-flex' : 'none' }">Telefone é obrigatório!</span>
+      </label>
       <input formControlName="telefone" class="form_input" placeholder="Telefone" >
 
-      <label class="form_label">Mensagem</label>
+      <label class="form_label">Mensagem
+        <span [ngStyle]="{ 'display': contactForm.controls['mensagem'].status === 'INVALID' && contactForm.controls['mensagem'].touched ? 'inline-flex' : 'none' }">Mensagem é obrigatório!</span>
+      </label>
       <textarea formControlName="mensagem" class="form_input" placeholder="Mensagem"></textarea>
 
-      <button [disabled]="!contactForm.valid" class="btn" mat-raised-button color="primary" (click)="submitForm(contactForm)">Enviar</button>
+      <button [disabled]="!contactForm.valid" class="btn" mat-raised-button color="primary" (click)="navigateSucess()">Enviar</button>
     </form>
   </div>
 </section>

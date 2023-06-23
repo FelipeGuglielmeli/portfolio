@@ -1,7 +1,6 @@
 .sobre {
-  height: 100vh;
   background-color: #fafafa;
-  padding: 100px 70px;
+  padding: 130px 60px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -49,6 +48,7 @@
   p {
     padding-bottom: 10px;
     text-align: justify;
+    font-size: 1rem;
   }
 
   .set_skills {

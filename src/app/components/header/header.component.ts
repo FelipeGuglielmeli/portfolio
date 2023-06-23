@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import {DomSanitizer} from '@angular/platform-browser';
-import {MatIconRegistry, MatIconModule} from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
+import { MatIconRegistry } from '@angular/material/icon';
 
 const THUMBUP_ICON =
   `
