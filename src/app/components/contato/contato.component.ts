@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from 'src/app/service/contact.service';
 
@@ -7,8 +7,8 @@ import { ContactService } from 'src/app/service/contact.service';
   templateUrl: './contato.component.html',
   styleUrls: ['./contato.component.scss']
 })
-export class ContatoComponent implements OnInit {
-  @Input() elementId = null
+export class ContatoComponent implements OnInit, OnChanges {
+  @Input() inputChange = ''
   contactForm: FormGroup
 
   constructor(private fb: FormBuilder, private readonly ContactSrv: ContactService) {
@@ -22,6 +22,10 @@ export class ContatoComponent implements OnInit {
 
   ngOnInit(): void {
 
+  }
+
+  ngOnChanges(changes: SimpleChanges){
+    this.contactForm.get("nome")?.setValue(changes["inputChange"].currentValue)
   }
 
   submitForm(data: any) {
