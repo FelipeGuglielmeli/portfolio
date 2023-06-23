@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ContactService } from 'src/app/service/contact.service';
 
 @Component({
@@ -11,7 +12,11 @@ export class ContatoComponent implements OnInit, OnChanges {
   @Input() inputChange = ''
   contactForm: FormGroup
 
-  constructor(private fb: FormBuilder, private readonly ContactSrv: ContactService) {
+  constructor(
+    private fb: FormBuilder,
+    private readonly ContactSrv: ContactService,
+    private readonly router: Router
+    ) {
     this.contactForm = this.fb.group({
       nome: ['', [Validators.required]],
       email: ['', [Validators.required]],
@@ -45,6 +50,8 @@ export class ContatoComponent implements OnInit, OnChanges {
     this.ContactSrv.submitContact( dataContact ).subscribe((res) => {
       console.log(res)
     })
+
+    this.router.navigate(['/confirmacao'])
   }
 
 }

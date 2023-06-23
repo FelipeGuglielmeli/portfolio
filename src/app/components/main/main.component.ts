@@ -1,11 +1,11 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit {
+export class MainComponent implements OnInit, OnDestroy {
   idSelection =  ''
 
 
@@ -17,6 +17,10 @@ export class MainComponent implements OnInit {
   scrollToComponent(componentId: string) {
     const element = this.elementRef.nativeElement.querySelector('#'+componentId);
     element.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  ngOnDestroy(): void {
+      console.log('destroy')
   }
 
 }
