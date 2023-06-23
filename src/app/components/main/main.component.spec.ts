@@ -20,4 +20,8 @@ describe('MainComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should scrollToComponent', () => {
+    expect(component.scrollToComponent('home')).toBe();
+  });
 });

@@ -8,7 +8,7 @@ import { ContactService } from 'src/app/service/contact.service';
 describe('ContatoComponent', () => {
   let component: ContatoComponent;
   let fixture: ComponentFixture<ContatoComponent>;
-  let formBuilde: FormBuilder
+  let formBuilder: FormBuilder
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -23,8 +23,8 @@ describe('ContatoComponent', () => {
 
     fixture = TestBed.createComponent(ContatoComponent);
     component = fixture.componentInstance;
-    formBuilde = TestBed.inject(FormBuilder)
-    component.contactForm = formBuilde.group({
+    formBuilder = TestBed.inject(FormBuilder)
+    component.contactForm = formBuilder.group({
       nome: [''],
       email: [''],
       telefone: [''],
