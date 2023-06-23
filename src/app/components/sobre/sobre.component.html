@@ -5,25 +5,26 @@
     </span>
     <span>
       <p class="subtitle">
-        Here you will find more information about me, what I do, and my current skills mostly in terms of programming
-        and technology.
+        Aqui você encontra mais informações sobre mim, sobre minhas experiências e estudos.
       </p>
     </span>
   </div>
   <div class="conteudo row">
     <div class="content col-6">
-      <h3 class="title">Get to know me!</h3>
+      <h3 class="title">Me conheça melhor.</h3>
       <span class="main_text">
-        <p>I'm a Frontend Web Developer building the Front-end of Websites and Web Applications that
-          leads to the
-          success of the overall product. Check out some of my work in the Projects section.</p>
+        <p>Tenho 29 anos, natural de Uberaba - MG. Fui criado por um pai nerdTech, meu primeiro PC foi um MMX 233 quando
+          tinha 6 anos e desde então virei um grande entusiasta de tecnologia, sempre focando meus estudos e empregos
+          nesta área.</p>
 
-        <p>I also like sharing content related to the stuff that I have learned over the years in Web Development so it
-          can help other people of the Dev Community. Feel free to Connect or Follow me on my Linkedin where I post
-          useful content related to Web Development and Programming</p>
+        <p>Comecei trabalhando com projetos de automação, programando e implementando CLPs em ladder. Depois migrei para
+          a área comercial desenvolvendo muito minhas habilidades de comunicação, trabalho em equipe, gestão e
+          treinamentos. Hoje a área comercial não me desafia tanto quanto eu gostaria e estou desenvolvendo minhas
+          habilidades na área de tech, a principal linguagem que trabalhei é JavaScript com Node.Js e Angular.</p>
 
-        <p>I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that
-          matches my skills and experience then don't hesitate to contact me.</p>
+        <p>Sou muito comunicativo e analítico, bastante interessado em engenharia e novas tecnologias de desenvolvimento
+          e estou aberto a novas oportunidades de trabalho onde eu possa contribuir, aprender e crescer. Sinta-se à
+          vontade para entrar em contato através do formulário abaixo.</p>
       </span>
     </div>
     <div class="skills col-6">
@@ -33,7 +34,7 @@
       <div class="set_skills">
         <div class="skill" *ngFor="let item of langs">
           <div class="item_name">{{ item.name }}</div>
-          <div class="item_anos " *ngIf="item.anos == 1; else plural" >{{ item.anos}} ano</div>
+          <div class="item_anos " *ngIf="item.anos == 1; else plural">{{ item.anos}} ano</div>
           <ng-template #plural>{{ item.anos}} anos</ng-template>
         </div>
       </div>

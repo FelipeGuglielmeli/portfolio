@@ -9,7 +9,6 @@ import { MatBadgeModule } from '@angular/material/badge'
 import { SobreComponent } from './components/sobre/sobre.component';
 import { CursosComponent } from './components/cursos/cursos.component';
 import { ContatoComponent } from './components/contato/contato.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
@@ -26,7 +25,6 @@ import { ConfirmacaoComponent } from './components/confirmacao/confirmacao.compo
     SobreComponent,
     CursosComponent,
     ContatoComponent,
-    FooterComponent,
     HomeComponent,
     HeaderComponent,
     ConfirmacaoComponent

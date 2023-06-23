@@ -15,7 +15,7 @@ constructor(private readonly http: HttpClient) { }
 //   return this.http.post(this.apiUrl, data)
 // }
 
-submitContact(data: any) {
+submitContact() {
   return this.http.get(this.apiUrl)
 }
 

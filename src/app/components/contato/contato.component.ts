@@ -26,31 +26,24 @@ export class ContatoComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
-
+    this.submitForm()
   }
 
   ngOnChanges(changes: SimpleChanges){
     this.contactForm.get("nome")?.setValue(changes["inputChange"].currentValue)
   }
 
-  submitForm(data: any) {
-    console.log(data)
-    let value = data.value
-
-    let dataContact = {
-      subject_matter: "Desafio Frontend",
-      comment: value?.mensagem,
-      contact: {
-        name: value?.nome,
-        tel: value?.telefone,
-        email: value?.email
-      }
-    }
-
-    this.ContactSrv.submitContact( dataContact ).subscribe((res) => {
+  submitForm() {
+    this.ContactSrv.submitContact().subscribe((res:any) => {
       console.log(res)
+      this.contactForm.get("nome")?.setValue(res.contact.name)
+      this.contactForm.get("email")?.setValue(res.contact.email)
+      this.contactForm.get("telefone")?.setValue(res.contact.tel)
+      this.contactForm.get("mensagem")?.setValue(res.comment)
     })
+  }
 
+  navigateSucess() {
     this.router.navigate(['/confirmacao'])
   }
 
