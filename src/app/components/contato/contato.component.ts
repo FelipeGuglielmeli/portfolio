@@ -26,14 +26,15 @@ export class ContatoComponent implements OnInit {
 
   submitForm(data: any) {
     console.log(data)
+    let value = data.value
 
     let dataContact = {
       subject_matter: "Desafio Frontend",
-      comment: data.value.mensagem,
+      comment: value?.mensagem,
       contact: {
-        name: data.value.nome,
-        tel: data.value.telefone,
-        email: data.value.email
+        name: value?.nome,
+        tel: value?.telefone,
+        email: value?.email
       }
     }
 

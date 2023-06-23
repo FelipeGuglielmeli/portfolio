@@ -23,10 +23,27 @@ describe('ContatoComponent', () => {
 
     fixture = TestBed.createComponent(ContatoComponent);
     component = fixture.componentInstance;
+    formBuilde = TestBed.inject(FormBuilder)
+    component.contactForm = formBuilde.group({
+      nome: [''],
+      email: [''],
+      telefone: [''],
+      mensagem: ['']
+    })
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should submitForm', () => {
+    let data = {
+      nome: '',
+      email: '',
+      telefone:'',
+      mensagem: ''
+    }
+    expect(component.submitForm(data)).toBe();
   });
 });
